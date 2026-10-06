@@ -37,6 +37,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
     export BUILD_HOSTNAME=github
 
     export FOX_VENDOR_BOOT_RECOVERY=1
+    export OF_SUPPORT_VBMETA_AVB2_PATCHING=1
     export FOX_VANILLA_BUILD=1
     export TARGET_DEVICE_ALT="citrine"
     export FOX_TARGET_DEVICES="beryl,citrine"
