@@ -38,6 +38,7 @@ MTK_HARDWARE := true
 
 # Disable hashtree + verification
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
+OF_SUPPORT_VBMETA_AVB2_PATCHING := 1
 
 BOARD_AVB_VBMETA_SYSTEM := system
 BOARD_AVB_VBMETA_SYSTEM_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
@@ -85,9 +86,8 @@ BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_TAGS_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --dtb_offset $(BOARD_DTB_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
 
-# SELinux Permissive (Debugging Only)
-BOARD_BOOTCONFIG                               += androidboot.selinux=permissive
-BOARD_RECOVERY_SELINUX_PERMISSIVE              := true
+# SELinux enforcing
+BOARD_RECOVERY_SELINUX_PERMISSIVE := false
 
 # Ramdisk use lz4
 BOARD_RAMDISK_USE_LZ4 := true
