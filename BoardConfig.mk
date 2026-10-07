@@ -20,7 +20,7 @@ SOONG_ALLOW_MISSING_DEPENDENCIES := true
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
-TARGET_CPU_ABI2 := 
+TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := generic
 TARGET_CPU_VARIANT_RUNTIME := cortex-a55
 
@@ -230,7 +230,7 @@ TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 
 # Battery & CPU Temp
 TW_CUSTOM_BATTERY_PATH := "/sys/class/power_supply/battery"
-TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone1/temp"
+TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone41/temp"
 
 # Haptics
 TW_NO_HAPTICS := false
